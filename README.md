@@ -17,6 +17,7 @@ https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_
 
 preinake su sljedeće:
 kod prevođenja tensorflow modela (pb datoteka generirana nakon izvršavanja koraka 5 u (3)) u IR (Intermediate Representation) oblik naredba koju su oni naveli je:
+<<<<<<< HEAD
 
 python3 mo_tf.py --input_model /path/to/yolo_v3.pb --tensorflow_use_custom_operations_config $MO_ROOT/extensions/front/tf/yolo_v3.json
 
@@ -24,6 +25,7 @@ umjesto te naredbe pokrenuti sljedeću (pogledaj prije napomene 2.2 i 2.3):
 
 python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_model <path do pb datoteke>/frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config <path do json datoteke>/yolo_v3_changed.json --input_shape '(1, 416, 416, 3)' --data_type FP16
 
+=======
 naredba navedena poviše je prikladna za izvođenje na NCS2.
 
 
@@ -55,6 +57,7 @@ https://docs.openvinotoolkit.org/latest/_inference_engine_ie_bridges_python_samp
 4. POVEZIVANJE ROS-a S NCS2
 
 Kod za povezivanje ROS-a s NCS2 je napravljen po uzoru na Intelov demo koji se može pronaći u sljedećem direktoriju:
+<<<<<<< HEAD
 
 /opt/intel/openvino/inference_engine/samples/object_detection_demo_yolov3_async
 
@@ -64,16 +67,19 @@ rosrun ros_intel_stick image_publisher <path do mp4 datoteke>/Test_video_for_Obj
 
 rosrun ros_intel_stick image_subscriber <path do xml datoteke>/frozen_darknet_yolov3_model.xml
 
+=======
 rostopic echo /object_detection
 
 5. DODACI:
 
 Korisni Github repozitoriji s Tensorflow implementacijom Yolov3 mreže:
+<<<<<<< HEAD
 
 https://github.com/mystic123/tensorflow-yolo-v3 (korišten u tutorijalu)
 
 https://github.com/YunYang1994/tensorflow-yolov3 
 
+=======
 https://github.com/PINTO0309/OpenVINO-YoloV3 
 
 ima ih vjerojatno još, ovo su samo neki.
