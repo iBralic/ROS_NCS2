@@ -26,7 +26,6 @@ python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_mo
 
 naredba navedena poviše je prikladna za izvođenje na NCS2.
 
-
 NAPOMENA 2.1: prilikom pokretanja naredbe za konvertiranje (5. korak u (3)) iznimno je važno to napraviti s Tensorflow verzijom <= 1.12 instaliranom. Ukoliko se ta naredba pokrene s verzijom 1.13 konverzija parametara neće biti ispravna.
 NAPOMENA 2.2: prilikom prevođenja modela u IR oblik koristiti json datoteku koja se nalazi ovdje:
 
