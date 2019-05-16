@@ -22,7 +22,7 @@ python3 mo_tf.py --input_model /path/to/yolo_v3.pb --tensorflow_use_custom_opera
 
 umjesto te naredbe pokrenuti sljedeću (pogledaj prije napomene 2.2 i 2.3):
 
-python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_model <path do pb datoteke>/frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config <path do json datoteke>/yolo_v3_changed.json --input_shape '(1, 416, 416, 3)' --data_type FP16
+python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_model [path do pb datoteke]/frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config [path do json datoteke]/yolo_v3_changed.json --input_shape '(1, 416, 416, 3)' --data_type FP16
 
 naredba navedena poviše je prikladna za izvođenje na NCS2.
 
@@ -32,6 +32,7 @@ NAPOMENA 2.2: prilikom prevođenja modela u IR oblik koristiti json datoteku koj
 https://github.com/PINTO0309/OpenVINO-YoloV3/blob/master/yolo_v3_changed.json (4)
 
 možda se može koristiti i json datoteka koju su oni pružili, ali nije testirano.
+
 NAPOMENA 2.3: kod pokretanja python skripte mo_tf.py koja služi za pretvaranje modela u IR oblik dobro je pokrenuti ju s -h zastavicom kako bi se vidjele mogućnosti prisutne kod konvertiranja (npr. zamjena RGB na BGR kanale ili skaliranje ulaznih vrijednosti) dodatne mogućnosti nisu testirane, sve je radilo ok i bez njih, jedine mogućnosti koje su korištene (i koje su nužne) su one koje su navedene u modificiranoj naredbi. Dodatne informacije su mogu pronaći na:
 
 https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_Converting_Model_General.html (5)
@@ -58,9 +59,9 @@ Kod za povezivanje ROS-a s NCS2 je napravljen po uzoru na Intelov demo koji se m
 
 Nakon kloniranja Github repo-a s kodom koji povezuje ROS s NCS2, za testiranje se mogu pokretnuti sljedeće naredbe (u različitim terminalima):
 
-rosrun ros_intel_stick image_publisher <path do mp4 datoteke>/Test_video_for_Object_detection.mp4
+rosrun ros_intel_stick image_publisher [path do mp4 datoteke]/Test_video_for_Object_detection.mp4
 
-rosrun ros_intel_stick image_subscriber <path do xml datoteke>/frozen_darknet_yolov3_model.xml
+rosrun ros_intel_stick image_subscriber [path do xml datoteke]/frozen_darknet_yolov3_model.xml
 
 rostopic echo /object_detection
 
