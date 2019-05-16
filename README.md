@@ -37,7 +37,6 @@ NAPOMENA 2.3: kod pokretanja python skripte mo_tf.py koja služi za pretvaranje 
 
 https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_Converting_Model_General.html (5)
 
-
 3. TESTIRANJE TENSORFLOW MODELA KONVERTIRANOG U OBLIK POGODAN ZA IZVOĐENJE NA NCS2
 
 Model se može testirati (C++) prateći upute na sljedećoj web stranici (pogledaj napomene prije):
